@@ -81,87 +81,87 @@ final List<Example> exampleTable = [
 
   Example(
       title: 'Demo',
-      subTitle: 'Flutter Sound capabilities',
+      subTitle: 'Flutter Sound capabilities（录制功能）',
       flags: 0,
       route: (_) => Demo(),
       description:
-          '''This is a Demo of what it is possible to do with Flutter Sound.
-The code of this Demo app is not so simple and unfortunately not very clean :-( .
+      '''这是一个演示 Flutter Sound 可以做什么的演示。
+这个演示应用程序的代码并不那么简单，不幸的是不是很干净:-(。
 
-Flutter Sound beginners : you probably should look to `[SimplePlayback]`  and `[SimpleRecorder]`
+Flutter Sound 初学者：您可能应该查看“[SimplePlayback]”和“[SimpleRecorder]”
 
-The biggest interest of this Demo is that it shows most of the features of Flutter Sound :
+这个Demo最大的看点在于它展示了Flutter Sound的大部分功能：
 
-- Plays from various media with various codecs
-- Records to various media with various codecs
-- Pause and Resume control from recording or playback
-- Shows how to use a Stream for getting the playback (or recoding) events
-- Shows how to specify a callback function when a playback is terminated,
-- Shows how to record to a Stream or playback from a stream
-- Can show controls on the iOS or Android lock-screen
+- 使用各种编解码器从各种媒体播放
+- 使用各种编解码器记录到各种媒体
+- 录制或播放的暂停和恢复控制
+- 展示如何使用 Stream 来获取播放（或重新编码）事件
+- 展示如何在播放终止时指定回调函数，
+- 展示如何录制到流或从流中播放
+- 可以在 iOS 或 Android 锁屏上显示控件
 - ...
 
-This Demo does not make use of the Flutter Sound UI Widgets.
+该演示没有使用 Flutter Sound UI Widgets。
 
-It would be really great if someone rewrite this demo soon'''),
+如果有人很快重写这个演示，那就太好了'''),
 
   Example(
-    title: 'simplePlayback',
+    title: 'simplePlayback（单条播放）',
     subTitle: 'A very simple example',
     flags: 0,
     route: (_) => SimplePlayback(),
     description: '''
-This is a very simple example for Flutter Sound beginners,
-that shows how to play a remote file.
+对于 Flutter Sound 初学者来说，这是一个非常简单的示例，
+显示如何播放远程文件。
 
-This example is really basic.
+这个例子非常基础。
 ''',
   ),
 
   Example(
-    title: 'simpleRecorder',
+    title: 'simpleRecorder（简单录制功能）',
     subTitle: 'A very simple example',
     flags: 0,
     route: (_) => SimpleRecorder(),
     description: '''
-This is a very simple example for Flutter Sound beginners,
-that shows how to record, and then playback a file.
+对于 Flutter Sound 初学者来说，这是一个非常简单的示例，
+显示如何录制然后播放文件。
 
-This example is really basic.
+这个例子非常基础。
 ''',
   ),
 
   Example(
-    title: 'multiPlayback',
+    title: 'multiPlayback（多重播放）',
     subTitle: 'Playing several sound at the same time',
     flags: 0,
     route: (_) => MultiPlayback(),
     description: '''
-This is a simple example that plays several sound at the same time.
+这是一个同时播放多个声音的简单示例。
 ''',
   ),
 
   Example(
-    title: 'Volume Control',
+    title: 'Volume Control（音量控制）',
     subTitle: 'Volume Control',
     flags: 0,
     route: (_) => VolumeControl(),
     description: '''
-This is a very simple example showing how to set the Volume during a playback.
+这是一个非常简单的示例，展示了如何在播放期间设置音量。
 
-This example is really basic.
+这个例子非常基础。
 ''',
   ),
 
   Example(
-    title: 'Speed Control',
+    title: 'Speed Control（速度控制）',
     subTitle: 'Speed Control',
     flags: 0,
     route: (_) => SpeedControl(),
     description: '''
-This is a very simple example showing how tune the speed of a playback.
+这是一个非常简单的示例，展示了如何调整播放速度。
 
-This example is really basic.
+这个例子非常基础。
 ''',
   ),
 
@@ -171,9 +171,9 @@ This example is really basic.
     flags: 0,
     route: (_) => Seek(),
     description: '''
-This is a very simple example showing how tune the speed of a playback.
+这是一个非常简单的示例，展示了如何调整播放速度。
 
-This example is really basic.
+这个例子非常基础。
 ''',
   ),
 
@@ -183,70 +183,70 @@ This example is really basic.
     flags: 0,
     route: (_) => PlayerOnProgress(),
     description: '''
-This is a very simple example showing how to  call `setSubscriptionDuration() and use onProgress() on a player.
+这是一个非常简单的示例，展示了如何在播放器上调用 `setSubscriptionDuration() 并使用 onProgress()。
 
 ''',
   ),
 
   Example(
-    title: 'Recorder onProgress',
+    title: 'Recorder onProgress（记录进度）',
     subTitle: 'Recorder onProgress',
     flags: 0,
     route: (_) => RecorderOnProgress(),
     description: '''
-This is a very simple example showing how to  call `setSubscriptionDuration() and use onProgress() on a recorder.
+这是一个非常简单的示例，展示了如何在记录器上调用 `setSubscriptionDuration() 并使用 onProgress()。
 
 ''',
   ),
 
   Example(
-    title: 'Play from Mic',
+    title: 'Play from Mic（从麦克风播放）',
     subTitle: 'Play from microphone',
     flags: tNotWeb,
     route: (_) => PlayFromMic(),
     description: '''
-Play on the bluetooth headset what is recorded by the microphone.
-This example is very simple.
+在蓝牙耳机上播放麦克风录制的内容。
+这个例子非常简单。
 
->>> Please ensure that your headset is correctly connected via bluetooth
+>>> 请确保您的耳机已通过蓝牙正确连接
 ''',
   ),
 
   Example(
-    title: 'recordToStream',
+    title: 'recordToStream（录制到 Stream 的示例）',
     subTitle: 'Example of recording to Stream',
     flags: tNotWeb,
     route: (_) => RecordToStreamExample(),
     description: '''
-This is an example showing how to record to a Dart Stream.
-It writes all the recorded data from a Stream to a File, which is completely stupid:
-if an App wants to record something to a File, it must not use Streams.
+这是一个展示如何记录到 Dart Stream 的示例。
+它将所有记录的数据从 Stream 写入文件，这是完全愚蠢的：
+如果应用程序想要将某些内容记录到文件中，则不得使用 Streams。
 
-The real interest of recording to a Stream is for example to feed a Speech-to-Text engine, or for processing the Live data in Dart in real time.
+记录到流的真正好处是例如为语音转文本引擎提供数据，或者实时处理 Dart 中的实时数据。
 ''',
   ),
 
   Example(
-    title: 'livePlaybackWithoutBackPressure',
+    title: 'livePlaybackWithoutBackPressure（无背压实时播放）',
     subTitle: 'Live Playback without BackPressure',
     flags: tNotWeb,
     route: (_) => LivePlaybackWithoutBackPressure(),
     description:
-        '''A very simple example showing how to play Live Data without back pressure.
-A very simple example showing how to play Live Data without back pressure.
-It feeds a live stream, without waiting that the Futures are completed for each block.
-This is simpler because the App does not need to await the playback for each block before playing another one.
+    '''一个非常简单的例子，展示了如何在没有背压的情况下播放实时数据。
+一个非常简单的示例，展示了如何在没有背压的情况下播放实时数据。
+它提供实时流，无需等待每个区块的期货完成。
+这更简单，因为应用程序不需要在播放另一块之前等待每个块的播放。
 
 
-This example get the data from an asset file, which is completely stupid :
-if an App wants to play an asset file he must use "StartPlayerFromBuffer().
+这个例子从资产文件中获取数据，这是完全愚蠢的：
+如果应用程序想要播放资产文件，他必须使用“StartPlayerFromBuffer()”。
 
-Feeding Flutter Sound without back pressure is very simple but you can have two problems :
-- If your App is too fast feeding the audio channel, it can have problems with the Stream memory used.
-- The App does not have any knowledge of when the provided block is really played.
-If he does a "stopPlayer()" it will loose all the buffered data.
+在没有背压的情况下馈送 Flutter Sound 非常简单，但您可能会遇到两个问题：
+- 如果您的应用程序传输音频通道的速度太快，则可能会出现使用的流内存问题。
+- 应用程序不知道所提供的块何时真正播放。
+如果他执行“stopPlayer()”，它将丢失所有缓冲的数据。
 
-This example uses the ```foodEvent``` object to resynchronize the output stream before doing a ```stop()```
+此示例使用“foodEvent”对象在执行“stop()”之前重新同步输出流
 ''',
   ),
 
@@ -256,15 +256,15 @@ This example uses the ```foodEvent``` object to resynchronize the output stream 
     flags: tNotWeb,
     route: (_) => LivePlaybackWithBackPressure(),
     description: '''
-A very simple example showing how to play Live Data with back pressure.
-It feeds a live stream, waiting that the Futures are completed for each block.
+一个非常简单的示例，展示了如何使用背压播放实时数据。
+它提供实时流，等待每个区块的期货完成。
 
-This example get the data from an asset file, which is completely stupid :
-if an App wants to play an asset file he must use "StartPlayerFromBuffer().
+这个例子从资产文件中获取数据，这是完全愚蠢的：
+如果应用程序想要播放资产文件，他必须使用“StartPlayerFromBuffer()”。
 
-If you do not need any back pressure, you can see another simple example : "LivePlaybackWithoutBackPressure.dart".
-This other example is a little bit simpler because the App does not need to await the playback for each block before
-playing another one.
+如果您不需要任何背压，您可以看到另一个简单的示例：“LivePlaybackWithoutBackPressure.dart”。
+这个另一个例子稍微简单一些，因为应用程序不需要在播放之前等待每个块的播放
+播放另一首。
 ''',
   ),
 
@@ -274,9 +274,9 @@ playing another one.
     flags: tNotWeb,
     route: (_) => SoundEffect(),
     description: '''
-```startPlayerFromStream()``` can be very efficient to play sound effects. For example in a game App.
-The App open the Audio Session and call ```startPlayerFromStream()``` during initialization.
-When it want to play a noise, it has just to call the verb ```feed```
+```startPlayerFromStream()``` 可以非常高效的播放音效。 例如在游戏应用程序中。
+应用程序打开音频会话并在初始化期间调用“startPlayerFromStream()”。
+当它想要播放噪音时，只需调用动词“feed”即可
 ''',
   ),
 
@@ -286,13 +286,13 @@ When it want to play a noise, it has just to call the verb ```feed```
     flags: tNotWeb,
     route: (_) => StreamLoop(),
     description: '''
-```streamLoop()``` is a very simple example which connect the FlutterSoundRecorder sink
-to the FlutterSoundPlayer Stream.
+```streamLoop()``` 是一个非常简单的例子，它连接 FlutterSoundRecorder 接收器
+到 FlutterSoundPlayer 流。
 
-Of course, we do not play to the loudspeaker to avoid a very unpleasant Larsen effect.
+当然，我们不会开扩音器播放，以避免出现非常令人不快的拉森效应。
 
-This example does not use a new StreamController, but use directly `foodStreamController`
-from flutter_sound_player.dart.
+本例没有使用新的StreamController，而是直接使用`foodStreamController`
+来自 flutter_sound_player.dart。
 ''',
   ),
 
@@ -302,8 +302,8 @@ from flutter_sound_player.dart.
     flags: 0,
     route: (_) => LogLevel(),
     description: '''
-```
-Shows how to change the loglevel during an audio session.
+````
+演示如何在音频会话期间更改日志级别。
 ''',
   ),
 
@@ -313,9 +313,9 @@ Shows how to change the loglevel during an audio session.
     flags: tNotWeb,
     route: (_) => StreamLoopJustAudio(),
     description: '''
-    ```
-    Test the StreamLoop with JustAudio cohabitation.
-    ''',
+````
+     测试 StreamLoop 与 JustAudio 的共存。
+     ''',
   ),
 ];
 
@@ -391,7 +391,7 @@ class _ExamplesHomePageState extends State<ExamplesAppHomePage> {
           borderOnForeground: false,
           elevation: 3.0,
           child: Container(
-            height: 50,
+            // height: 50,
             margin: const EdgeInsets.all(3),
             padding: const EdgeInsets.all(3),
             decoration: BoxDecoration(
